@@ -14,9 +14,7 @@ $(document).ready(function () {
     // Create a variable to reference the database
     var trainDB = firebase.database();
 
-    // YOUR TASK!!!
     // Code in the logic for storing and retrieving the most recent user.
-    // Don't forget to provide initial data to your Firebase database.
     var trainName = $("#train-name-input").val().trim();
     var trainDest = $("#train-dest-input").val().trim();
     var trainFirst = $("#train-first-input").val().trim();
@@ -42,7 +40,6 @@ $(document).ready(function () {
             trainFreq: trainFreq,
             firstMoment: firstMoment
         });
-
     });
 
     // Firebase watcher + initial loader HINT: .on("value")
