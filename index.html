@@ -3,24 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<!--    <meta http-equiv="x-ua-compatible" content="ie=edge">-->
     <title>Untitled Document</title>
 
    <!-- moment.js -->
-    
-    <script>https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js</script>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/ar-dz.js"></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 
-    <meta name="description" content="">
+    <meta name="description" content="train">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
@@ -30,15 +28,15 @@
         <br>
 
         <!-- Jumbotron -->
-        <div class="jumbotron">
-            <h1 class="text-center">Anytime is Train Time</h1>
+        <div class="jumbotron bg-danger">
+            <h1 class="text-center">Anytime is train time</h1>
             <h2 class="text-center">Choo Choo. Chee Chee.</h2>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">Current Trian Schedule</div>
-                    <table class="table">
+                    <table id="trainTable">
                 <thead>
                    <tr> <th>Train Name</th> <th>Destination</th> <th>Frequency (min)</th> <th>Next Arrival</th> <th>Minutes Away</th> </tr>
                 </thead>
@@ -55,7 +53,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row">
 
             <!-- Sign-Up Panel-->
@@ -70,19 +68,19 @@
                         <form role="form">
                             <div class="form-group">
                                 <label for="trainName-input">Train Name</label>
-                                <input class="form-control" id="trainNameInput" type="text">
+                                <input class="form-control" id="train-name-input" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="destination-input">Destination</label>
-                                <input class="form-control" id="destinationInput" type="text">
+                                <input class="form-control" id="train-dest-input" type="text">
                             </div>
                             <div class="form-group">
                                 <label for="trainTime-input">First Train Time ( HH : mm - military time)</label>
-                                <input class="form-control" id="firstTrainInput" type="number">
+                                <input class="form-control" id="train-first-input" type="number">
                             </div>
                             <div class="form-group">
                                 <label for="frequency-input">Frequency (min)</label>
-                                <input class="form-control" id="frequencyInput" type="number">
+                                <input class="form-control" id="train-freq-input" type="number">
                             </div>
                             <button class="btn btn-primary" id="submit" type="submit">Submit</button>
                         </form>
@@ -91,18 +89,15 @@
             </div>
         </div>
     </div>
-    
+
     <!-- LINK TO FIREBASE GOES HERE -->
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
-    
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    
+
     <!-- My script.js -->
-    <script src="js/script.js"></script>
-    <script>
-        <!-- JS on the page -->
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
